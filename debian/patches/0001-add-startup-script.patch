@@ -1,19 +1,23 @@
 From: =?utf-8?q?Christoph_Schr=C3=B6der?=
  <christoph.schroeder@helmholtz-berlin.de>
-Date: Thu, 7 Jun 2018 16:21:03 +0200
+Date: Tue, 26 Oct 2021 09:32:42 +0200
 Subject: add startup script
 
 ---
- visualdct | 3 +++
- 1 file changed, 3 insertions(+)
- create mode 100644 visualdct
+ visualdct | 7 +++++++
+ 1 file changed, 7 insertions(+)
+ create mode 100755 visualdct
 
 diff --git a/visualdct b/visualdct
-new file mode 100644
-index 0000000..3632bfa
+new file mode 100755
+index 0000000..6bfe506
 --- /dev/null
 +++ b/visualdct
-@@ -0,0 +1,3 @@
+@@ -0,0 +1,7 @@
 +#!/bin/sh
++# VisualDCT editor run script
 +
-+exec java -jar /usr/share/maven-repo/com/cosylab/vdct/VisualDCT/debian/VisualDCT-debian.jar "$@"
++VDCT_HOME="/usr/share/maven-repo/com/cosylab/vdct/VisualDCT/debian"
++CLASSPATH="${CLASSPATH:+${CLASSPATH}:}$VDCT_HOME/VisualDCT-debian.jar"
++
++java -classpath "$CLASSPATH" -DEPICS_DB_INCLUDE_PATH="$EPICS_DB_INCLUDE_PATH" com.cosylab.vdct.VisualDCT "$@"
