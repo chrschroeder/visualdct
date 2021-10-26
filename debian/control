@@ -11,7 +11,7 @@ Homepage: https://github.com/epics-extensions/VisualDCT
 
 Package: visualdct
 Architecture: all
-Depends: ${misc:Depends}, ${maven:Depends}
+Depends: default-jre, ${misc:Depends}, ${maven:Depends}
 Suggests: ${maven:OptionalDepends}, visualdct-doc
 Description: Visual DCT
  EPICS Visual Database Configuration Tool. Developed by Cosylab, funded
