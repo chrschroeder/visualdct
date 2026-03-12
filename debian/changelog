@@ -1,3 +1,14 @@
+visualdct (2.8.3-1) unstable; urgency=medium
+
+  * New upstream version 2.8.3
+  * update copyright formatting
+  * update patch queue for 2.8.3
+  * update apidoc install path
+  * ingnore lintian source package warnings
+  * update build for Debian 13
+
+ -- Christoph Schröder <christoph.schroeder@helmholtz-berlin.de>  Thu, 12 Mar 2026 15:24:53 +0100
+
 visualdct (2.8.2-1) unstable; urgency=medium
 
   * New upstream version 2.8.2
